@@ -43,7 +43,7 @@ var TableNodeView = function (_TableView) {
   function TableNodeView(node, colMinWidth, view) {
     (0, _classCallCheck3.default)(this, TableNodeView);
 
-    var _this = (0, _possibleConstructorReturn3.default)(this, (TableNodeView.__proto__ || (0, _getPrototypeOf2.default)(TableNodeView)).call(this, node, colMinWidth, view));
+    var _this = (0, _possibleConstructorReturn3.default)(this, (TableNodeView.__proto__ || (0, _getPrototypeOf2.default)(TableNodeView)).call(this, node, colMinWidth));
 
     _this._updateMargin(node);
     return _this;

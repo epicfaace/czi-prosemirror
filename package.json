@@ -16,6 +16,10 @@
     "lint:js": "eslint \"**/*.js\"",
     "start": "node scripts/webserver.js"
   },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
   "devDependencies": {
     "async-await": "0.1.40",
     "babel-cli": "6.26.0",
@@ -78,7 +82,9 @@
     "uglifyjs-webpack-plugin": "1.2.5",
     "webpack": "3.5.4",
     "webpack-dev-server": "2.3.0",
-    "write-file-webpack-plugin": "3.4.2"
+    "write-file-webpack-plugin": "3.4.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "dependencies": {
     "babel-preset-es2015": "6.16.0",
@@ -99,13 +105,11 @@
     "prosemirror-model": "1.6.3",
     "prosemirror-schema-list": "1.0.1",
     "prosemirror-state": "1.2.2",
-    "prosemirror-tables": "https://github.com/chanzuckerberg/prosemirror-tables.git#c18da9f6e016d0f07355fa2bf1a59f5b05d762ab",
+    "prosemirror-tables": "git+https://github.com/ProseMirror/prosemirror-tables.git#35a78aed1cfbc850dce73a31953fb8bd352e2501",
     "prosemirror-transform": "1.1.3",
     "prosemirror-utils": "0.6.6",
     "prosemirror-view": "1.6.7",
     "query-string": "3.0.3",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
     "resize-observer-polyfill": "1.5.0",
     "smooth-scroll-into-view-if-needed": "1.1.23",
     "stable": "0.1.8",

@@ -3,9 +3,9 @@ import {EditorView} from 'prosemirror-view';
 import {TableView} from 'prosemirror-tables';
 
 // A custom table view that renders the margin-left style.
-export default class TableNodeView extends TableView {
+class TableNodeView extends TableView {
   constructor(node: Node, colMinWidth: number, view: EditorView) {
-    super(node, colMinWidth, view);
+    super(node, colMinWidth);
     this._updateMargin(node);
   }
   update(node: Node): boolean {
@@ -20,3 +20,5 @@ export default class TableNodeView extends TableView {
     this.table.style.marginLeft = marginLeft ? `${marginLeft}px` : '';
   }
 }
+
+export default TableNodeView;
