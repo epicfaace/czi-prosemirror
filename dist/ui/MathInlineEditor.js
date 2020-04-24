@@ -42,10 +42,6 @@ var _CustomEditorView = require('./CustomEditorView');
 
 var _CustomEditorView2 = _interopRequireDefault(_CustomEditorView);
 
-var _MathEditor = require('./MathEditor');
-
-var _MathEditor2 = _interopRequireDefault(_MathEditor);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -56,6 +52,7 @@ var _createPopUp2 = _interopRequireDefault(_createPopUp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import MathEditor from './MathEditor';
 var MathAlignValues = {
   NONE: {
     value: null,
@@ -103,7 +100,9 @@ var MathInlineEditor = function (_React$PureComponent) {
         runtime: editorView ? editorView.runtime : null,
         initialValue: value && value.latex || ''
       };
-      _this._popUp = (0, _createPopUp2.default)(_MathEditor2.default, props, {
+      _this._popUp = (0, _createPopUp2.default)(function () {
+        return null;
+      }, props, {
         autoDismiss: false,
         modal: true,
         onClose: function onClose(latex) {

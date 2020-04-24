@@ -3,7 +3,7 @@
 import './czi-inline-editor.css';
 import CustomButton from './CustomButton';
 import CustomEditorView from './CustomEditorView';
-import MathEditor from './MathEditor';
+// import MathEditor from './MathEditor';
 import React from 'react';
 import createPopUp from './createPopUp';
 
@@ -81,7 +81,7 @@ class MathInlineEditor extends React.PureComponent<any, any, any> {
       runtime: editorView ? editorView.runtime : null,
       initialValue: (value && value.latex) || '',
     };
-    this._popUp = createPopUp(MathEditor, props, {
+    this._popUp = createPopUp(() => null, props, {
       autoDismiss: false,
       modal: true,
       onClose: latex => {

@@ -8,7 +8,7 @@ import ColorEditor from '../src/ui/ColorEditor';
 import CustomButton from '../src/ui/CustomButton';
 import CustomRadioButton from '../src/ui/CustomRadioButton';
 import ImageURLEditor from '../src/ui/ImageURLEditor';
-import MathEditor from '../src/ui/MathEditor';
+// import MathEditor from '../src/ui/MathEditor';
 import TableGridSizeEditor from '../src/ui/TableGridSizeEditor';
 import createPopUp from '../src/ui/createPopUp';
 import renderLaTeXAsHTML from '../src/ui/renderLaTeXAsHTML';
@@ -58,7 +58,7 @@ class MathEditorExample extends React.PureComponent<any, any, any> {
   _onClick = (): void => {
     if (!this._popup) {
       this._popup = createPopUp(
-        MathEditor,
+        () => null,
         {initialValue: this.state.latex},
         {
           onClose: latex => {

@@ -13,7 +13,7 @@ import {
   showCursorPlaceholder,
 } from './CursorPlaceholderPlugin';
 import {MATH} from './NodeNames';
-import MathEditor from './ui/MathEditor';
+// import MathEditor from './ui/MathEditor';
 import UICommand from './ui/UICommand';
 import createPopUp from './ui/createPopUp';
 
@@ -73,7 +73,7 @@ class MathEditCommand extends UICommand {
         runtime: view ? view.runtime : null,
         initialValue: null,
       };
-      this._popUp = createPopUp(MathEditor, props, {
+      this._popUp = createPopUp(() => null, props, {
         modal: true,
         onClose: val => {
           if (this._popUp) {

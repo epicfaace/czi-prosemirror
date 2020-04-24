@@ -40,10 +40,6 @@ var _CursorPlaceholderPlugin = require('./CursorPlaceholderPlugin');
 
 var _NodeNames = require('./NodeNames');
 
-var _MathEditor = require('./ui/MathEditor');
-
-var _MathEditor2 = _interopRequireDefault(_MathEditor);
-
 var _UICommand2 = require('./ui/UICommand');
 
 var _UICommand3 = _interopRequireDefault(_UICommand2);
@@ -54,7 +50,7 @@ var _createPopUp2 = _interopRequireDefault(_createPopUp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// eslint-disable-next-line no-unused-vars
+// import MathEditor from './ui/MathEditor';
 function insertMath(tr, schema, latex) {
   var _tr = tr,
       selection = _tr.selection;
@@ -83,6 +79,7 @@ function insertMath(tr, schema, latex) {
   tr = tr.insert(from, frag);
   return tr;
 }
+// eslint-disable-next-line no-unused-vars
 
 var MathEditCommand = function (_UICommand) {
   (0, _inherits3.default)(MathEditCommand, _UICommand);
@@ -120,7 +117,9 @@ var MathEditCommand = function (_UICommand) {
           runtime: view ? view.runtime : null,
           initialValue: null
         };
-        _this._popUp = (0, _createPopUp2.default)(_MathEditor2.default, props, {
+        _this._popUp = (0, _createPopUp2.default)(function () {
+          return null;
+        }, props, {
           modal: true,
           onClose: function onClose(val) {
             if (_this._popUp) {
