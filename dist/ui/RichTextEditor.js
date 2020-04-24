@@ -32,10 +32,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _createEmptyEditorState = require('../createEmptyEditorState');
-
-var _createEmptyEditorState2 = _interopRequireDefault(_createEmptyEditorState);
-
 var _Editor = require('./Editor');
 
 var _Editor2 = _interopRequireDefault(_Editor);
@@ -60,9 +56,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var babelPluginFlowReactPropTypes_proptype_EditorFramesetProps = require('./EditorFrameset').babelPluginFlowReactPropTypes_proptype_EditorFramesetProps || require('prop-types').any;
 
+// import createEmptyEditorState from '../createEmptyEditorState';
+
+
 var babelPluginFlowReactPropTypes_proptype_EditorProps = require('./Editor').babelPluginFlowReactPropTypes_proptype_EditorProps || require('prop-types').any;
 
-var EMPTY_EDITOR_STATE = (0, _createEmptyEditorState2.default)();
+var EMPTY_EDITOR_STATE = {};
 var EMPTY_EDITOR_RUNTIME = {};
 
 var RichTextEditor = function (_React$PureComponent) {

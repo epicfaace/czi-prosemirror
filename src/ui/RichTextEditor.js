@@ -4,7 +4,7 @@ import {Transform} from 'prosemirror-transform';
 import {EditorView} from 'prosemirror-view';
 import React from 'react';
 
-import createEmptyEditorState from '../createEmptyEditorState';
+// import createEmptyEditorState from '../createEmptyEditorState';
 import Editor from './Editor';
 import EditorFrameset from './EditorFrameset';
 import EditorToolbar from './EditorToolbar';
@@ -23,7 +23,7 @@ type State = {
   editorView: ?EditorView,
 };
 
-const EMPTY_EDITOR_STATE = createEmptyEditorState();
+const EMPTY_EDITOR_STATE: any = {};
 const EMPTY_EDITOR_RUNTIME = {};
 
 class RichTextEditor extends React.PureComponent<any, any, any> {
