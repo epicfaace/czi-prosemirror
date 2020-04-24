@@ -19,7 +19,7 @@ import {
 } from '../CZIProseMirror';
 import {BOOKMARK, IMAGE, LIST_ITEM, MATH} from '../NodeNames';
 import WebFontLoader from '../WebFontLoader';
-import createEmptyEditorState from '../createEmptyEditorState';
+// import createEmptyEditorState from '../createEmptyEditorState';
 import normalizeHTML from '../normalizeHTML';
 import BookmarkNodeView from './BookmarkNodeView';
 import CustomEditorView from './CustomEditorView';
@@ -69,7 +69,7 @@ export const DEFAULT_NODE_VIEWS = Object.freeze({
   [LIST_ITEM]: ListItemNodeView,
 });
 
-const EDITOR_EMPTY_STATE = Object.freeze(createEmptyEditorState());
+const EDITOR_EMPTY_STATE: any = {}; // Object.freeze(createEmptyEditorState());
 
 // Monkey patch the `scrollIntoView` mathod of 'Transaction'.
 // Why this is necessary?

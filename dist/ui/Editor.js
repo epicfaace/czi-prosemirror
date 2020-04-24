@@ -42,6 +42,8 @@ var _freeze = require('babel-runtime/core-js/object/freeze');
 var _freeze2 = _interopRequireDefault(_freeze);
 
 var _Object$freeze2;
+// import createEmptyEditorState from '../createEmptyEditorState';
+
 
 var _classnames = require('classnames');
 
@@ -74,10 +76,6 @@ var _NodeNames = require('../NodeNames');
 var _WebFontLoader = require('../WebFontLoader');
 
 var _WebFontLoader2 = _interopRequireDefault(_WebFontLoader);
-
-var _createEmptyEditorState = require('../createEmptyEditorState');
-
-var _createEmptyEditorState2 = _interopRequireDefault(_createEmptyEditorState);
 
 var _normalizeHTML = require('../normalizeHTML');
 
@@ -157,7 +155,7 @@ var AUTO_FOCUS_DELAY = 350;
 // Default custom node views.
 var DEFAULT_NODE_VIEWS = exports.DEFAULT_NODE_VIEWS = (0, _freeze2.default)((_Object$freeze2 = {}, (0, _defineProperty3.default)(_Object$freeze2, _NodeNames.IMAGE, _ImageNodeView2.default), (0, _defineProperty3.default)(_Object$freeze2, _NodeNames.MATH, _MathNodeView2.default), (0, _defineProperty3.default)(_Object$freeze2, _NodeNames.BOOKMARK, _BookmarkNodeView2.default), (0, _defineProperty3.default)(_Object$freeze2, _NodeNames.LIST_ITEM, _ListItemNodeView2.default), _Object$freeze2));
 
-var EDITOR_EMPTY_STATE = (0, _freeze2.default)((0, _createEmptyEditorState2.default)());
+var EDITOR_EMPTY_STATE = {}; // Object.freeze(createEmptyEditorState());
 
 // Monkey patch the `scrollIntoView` mathod of 'Transaction'.
 // Why this is necessary?
