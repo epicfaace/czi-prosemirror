@@ -1,6 +1,6 @@
 // @flow
 
-import {EditorState, Plugin} from 'prosemirror-state';
+import {EditorState, Plugin, PluginKey} from 'prosemirror-state';
 import {EditorView} from 'prosemirror-view';
 /* eslint-disable-next-line */
 import React from 'react';
@@ -13,6 +13,8 @@ import createPopUp from './ui/createPopUp';
 import isElementFullyVisible from './ui/isElementFullyVisible';
 
 import './ui/czi-pop-up.css';
+
+const PLUGIN_KEY = new PluginKey('tableCellMenu');
 
 class TableCellTooltipView {
   _cellElement: null;
@@ -104,6 +106,7 @@ class TableCellTooltipView {
 
 // https://prosemirror.net/examples/tooltip/
 const SPEC = {
+  key: PLUGIN_KEY,
   view(editorView: EditorView) {
     return new TableCellTooltipView(editorView);
   },

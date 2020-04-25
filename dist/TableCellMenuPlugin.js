@@ -59,6 +59,8 @@ require('./ui/czi-pop-up.css');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /* eslint-disable-next-line */
+var PLUGIN_KEY = new _prosemirrorState.PluginKey('tableCellMenu');
+
 var TableCellTooltipView = function () {
   function TableCellTooltipView(editorView) {
     var _this = this;
@@ -159,6 +161,7 @@ var TableCellTooltipView = function () {
 
 
 var SPEC = {
+  key: PLUGIN_KEY,
   view: function view(editorView) {
     return new TableCellTooltipView(editorView);
   }
