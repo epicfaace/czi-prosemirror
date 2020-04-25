@@ -27,6 +27,7 @@ var _DocNodeSpec = require('./DocNodeSpec');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SPEC = {
+  key: "editorPageLayout",
   props: {
     attributes: renderAttributes
   }

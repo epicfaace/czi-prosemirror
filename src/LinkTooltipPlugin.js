@@ -21,6 +21,7 @@ import './ui/czi-pop-up.css';
 
 // https://prosemirror.net/examples/tooltip/
 const SPEC = {
+  key: "linkTooltip",
   view(editorView: EditorView) {
     return new LinkTooltipView(editorView);
   },

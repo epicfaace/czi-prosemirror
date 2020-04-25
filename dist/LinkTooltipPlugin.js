@@ -64,6 +64,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // https://prosemirror.net/examples/tooltip/
 var SPEC = {
+  key: "linkTooltip",
   view: function view(editorView) {
     return new LinkTooltipView(editorView);
   }

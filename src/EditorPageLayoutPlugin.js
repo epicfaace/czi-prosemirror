@@ -5,6 +5,7 @@ import {EditorState, Plugin} from 'prosemirror-state';
 import {ATTRIBUTE_LAYOUT, LAYOUT} from './DocNodeSpec';
 
 const SPEC = {
+  key: "editorPageLayout",
   props: {
     attributes: renderAttributes,
   },

@@ -228,6 +228,7 @@ var ContentPlaceholderPlugin = function (_Plugin) {
   function ContentPlaceholderPlugin() {
     (0, _classCallCheck3.default)(this, ContentPlaceholderPlugin);
     return (0, _possibleConstructorReturn3.default)(this, (ContentPlaceholderPlugin.__proto__ || (0, _getPrototypeOf2.default)(ContentPlaceholderPlugin)).call(this, {
+      key: "contentPlaceholder",
       view: function view(editorView) {
         return new ContentPlaceholderView(editorView);
       }

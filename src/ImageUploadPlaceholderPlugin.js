@@ -150,6 +150,7 @@ export function uploadImageFiles(
 class ImageUploadPlaceholderPlugin extends Plugin {
   constructor() {
     super({
+      key: "imageUploadPlaceholder",
       state: {
         init() {
           return DecorationSet.empty;

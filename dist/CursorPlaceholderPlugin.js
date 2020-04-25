@@ -39,6 +39,7 @@ var singletonInstance = null;
 
 // https://prosemirror.net/examples/upload/
 var SPEC = {
+  key: "cursorPlaceholder",
   state: {
     init: function init() {
       return _prosemirrorView.DecorationSet.empty;

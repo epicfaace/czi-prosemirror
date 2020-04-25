@@ -12,6 +12,7 @@ let singletonInstance = null;
 
 // https://prosemirror.net/examples/upload/
 const SPEC = {
+  key: "cursorPlaceholder",
   state: {
     init() {
       return DecorationSet.empty;

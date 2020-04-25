@@ -174,6 +174,7 @@ class ContentPlaceholderView {
 class ContentPlaceholderPlugin extends Plugin {
   constructor() {
     super({
+      key: "contentPlaceholder",
       view(editorView: EditorView) {
         return new ContentPlaceholderView(editorView);
       },

@@ -185,6 +185,7 @@ var ImageUploadPlaceholderPlugin = function (_Plugin) {
   function ImageUploadPlaceholderPlugin() {
     (0, _classCallCheck3.default)(this, ImageUploadPlaceholderPlugin);
     return (0, _possibleConstructorReturn3.default)(this, (ImageUploadPlaceholderPlugin.__proto__ || (0, _getPrototypeOf2.default)(ImageUploadPlaceholderPlugin)).call(this, {
+      key: "imageUploadPlaceholder",
       state: {
         init: function init() {
           return _prosemirrorView.DecorationSet.empty;
