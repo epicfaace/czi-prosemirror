@@ -37,9 +37,11 @@ var PLACE_HOLDER_ID = { name: 'CursorPlaceholderPlugin' };
 
 var singletonInstance = null;
 
+var PLUGIN_KEY = new _prosemirrorState.PluginKey('cursorPlaceholder');
+
 // https://prosemirror.net/examples/upload/
 var SPEC = {
-  key: "cursorPlaceholder",
+  key: PLUGIN_KEY,
   state: {
     init: function init() {
       return _prosemirrorView.DecorationSet.empty;

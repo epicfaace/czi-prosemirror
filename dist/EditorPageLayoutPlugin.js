@@ -26,8 +26,10 @@ var _DocNodeSpec = require('./DocNodeSpec');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var PLUGIN_KEY = new _prosemirrorState.PluginKey('editorPageLayout');
+
 var SPEC = {
-  key: "editorPageLayout",
+  key: PLUGIN_KEY,
   props: {
     attributes: renderAttributes
   }

@@ -1,6 +1,6 @@
 // @flow
 
-import {EditorState, Plugin} from 'prosemirror-state';
+import {EditorState, Plugin, PluginKey} from 'prosemirror-state';
 import {TextSelection} from 'prosemirror-state';
 import {EditorView} from 'prosemirror-view';
 
@@ -19,9 +19,11 @@ import createPopUp from './ui/createPopUp';
 
 import './ui/czi-pop-up.css';
 
+const PLUGIN_KEY = new PluginKey('linkTooltip');
+
 // https://prosemirror.net/examples/tooltip/
 const SPEC = {
-  key: "linkTooltip",
+  key: PLUGIN_KEY,
   view(editorView: EditorView) {
     return new LinkTooltipView(editorView);
   },

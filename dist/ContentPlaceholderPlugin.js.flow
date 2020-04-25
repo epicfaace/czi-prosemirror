@@ -1,6 +1,6 @@
 // @flow
 
-import {Plugin} from 'prosemirror-state';
+import {Plugin, PluginKey} from 'prosemirror-state';
 import {EditorView} from 'prosemirror-view';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -171,10 +171,12 @@ class ContentPlaceholderView {
   }
 }
 
+const PLUGIN_KEY = new PluginKey('contentPlaceholder');
+
 class ContentPlaceholderPlugin extends Plugin {
   constructor() {
     super({
-      key: "contentPlaceholder",
+      key: PLUGIN_KEY,
       view(editorView: EditorView) {
         return new ContentPlaceholderView(editorView);
       },

@@ -62,9 +62,13 @@ require('./ui/czi-pop-up.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var PLUGIN_KEY = new _prosemirrorState.PluginKey('linkTooltip');
+
 // https://prosemirror.net/examples/tooltip/
+
+
 var SPEC = {
-  key: "linkTooltip",
+  key: PLUGIN_KEY,
   view: function view(editorView) {
     return new LinkTooltipView(editorView);
   }

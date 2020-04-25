@@ -1,7 +1,7 @@
 // @flow
 
 import nullthrows from 'nullthrows';
-import {Plugin} from 'prosemirror-state';
+import {Plugin, PluginKey} from 'prosemirror-state';
 import {EditorState, TextSelection} from 'prosemirror-state';
 import {Transform} from 'prosemirror-transform';
 import {Decoration, DecorationSet} from 'prosemirror-view';
@@ -146,11 +146,13 @@ export function uploadImageFiles(
   return true;
 }
 
+const PLUGIN_KEY = new PluginKey('imageUploadPlaceholder');
+
 // https://prosemirror.net/examples/upload/
 class ImageUploadPlaceholderPlugin extends Plugin {
   constructor() {
     super({
-      key: "imageUploadPlaceholder",
+      key: PLUGIN_KEY,
       state: {
         init() {
           return DecorationSet.empty;

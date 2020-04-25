@@ -1,11 +1,13 @@
 // @flow
 
-import {EditorState, Plugin} from 'prosemirror-state';
+import {EditorState, Plugin, PluginKey} from 'prosemirror-state';
 
 import {ATTRIBUTE_LAYOUT, LAYOUT} from './DocNodeSpec';
 
+const PLUGIN_KEY = new PluginKey('editorPageLayout');
+
 const SPEC = {
-  key: "editorPageLayout",
+  key: PLUGIN_KEY,
   props: {
     attributes: renderAttributes,
   },

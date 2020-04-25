@@ -1,6 +1,6 @@
 // @flow
 
-import {EditorState, Plugin} from 'prosemirror-state';
+import {EditorState, Plugin, PluginKey} from 'prosemirror-state';
 import {Transform} from 'prosemirror-transform';
 import {Decoration, DecorationSet} from 'prosemirror-view';
 
@@ -10,9 +10,12 @@ const PLACE_HOLDER_ID = {name: 'CursorPlaceholderPlugin'};
 
 let singletonInstance = null;
 
+
+const PLUGIN_KEY = new PluginKey('cursorPlaceholder');
+
 // https://prosemirror.net/examples/upload/
 const SPEC = {
-  key: "cursorPlaceholder",
+  key: PLUGIN_KEY,
   state: {
     init() {
       return DecorationSet.empty;
