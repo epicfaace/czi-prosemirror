@@ -33,12 +33,14 @@ require('./ui/czi-selection-placeholder.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var PLUGIN_KEY = new _prosemirrorState.PluginKey('selectionPlaceholder');
 var PLACE_HOLDER_ID = { name: 'SelectionPlaceholderPlugin' };
 
 var singletonInstance = null;
 
 // https://prosemirror.net/examples/upload/
 var SPEC = {
+  key: PLUGIN_KEY,
   state: {
     init: function init() {
       return _prosemirrorView.DecorationSet.empty;

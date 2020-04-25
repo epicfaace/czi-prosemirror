@@ -1,17 +1,19 @@
 // @flow
 
-import {EditorState, Plugin} from 'prosemirror-state';
+import {EditorState, Plugin, PluginKey} from 'prosemirror-state';
 import {Transform} from 'prosemirror-transform';
 import {Decoration, DecorationSet} from 'prosemirror-view';
 
 import './ui/czi-selection-placeholder.css';
 
+const PLUGIN_KEY = new PluginKey('selectionPlaceholder');
 const PLACE_HOLDER_ID = {name: 'SelectionPlaceholderPlugin'};
 
 let singletonInstance = null;
 
 // https://prosemirror.net/examples/upload/
 const SPEC = {
+  key: PLUGIN_KEY,
   state: {
     init() {
       return DecorationSet.empty;
